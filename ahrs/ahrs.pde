@@ -2,6 +2,7 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_LSM303_U.h>
 #include <Adafruit_9DOF.h>
+#include <Adafruit_L3GD20_U.h>
 
 /* Assign a unique ID to the sensors */
 Adafruit_9DOF                 dof   = Adafruit_9DOF();
