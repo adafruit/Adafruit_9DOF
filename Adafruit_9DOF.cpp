@@ -208,8 +208,10 @@ bool Adafruit_9DOF::magTiltCompensation(sensors_axis_t axis, sensors_event_t *ma
   /* The tilt compensation algorithm                            */
   /* Xh = X.cosPitch + Z.sinPitch                               */
   /* Yh = X.sinRoll.sinPitch + Y.cosRoll - Z.sinRoll.cosPitch   */
+  
+  float tmp_mag_X = *max_X;
   *mag_X = (*mag_X) * cosPitch + (*mag_Z) * sinPitch;
-  *mag_Y = (*mag_X) * sinRoll * sinPitch + (*mag_Y) * cosRoll - (*mag_Z) * sinRoll * cosPitch;
+  *mag_Y = (tmp_mag_X) * sinRoll * sinPitch + (*mag_Y) * cosRoll - (*mag_Z) * sinRoll * cosPitch;
 
   return true;
 }
