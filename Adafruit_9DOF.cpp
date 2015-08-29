@@ -7,7 +7,7 @@
   These displays use I2C to communicate, 2 pins are required to interface.
 
   Adafruit invests time and resources providing this open source code,
-  please support Adafruit andopen-source hardware by purchasing products
+  please support Adafruit and open-source hardware by purchasing products
   from Adafruit!
 
   Written by Kevin Townsend for Adafruit Industries.  
@@ -38,7 +38,7 @@
  
 /**************************************************************************/
 /*!
-    @brief  Instantiates a new Adafruit_9DOF class
+    @brief  Instantiates a new instance of the Adafruit_9DOF class
 */
 /**************************************************************************/
 Adafruit_9DOF::Adafruit_9DOF(void) 
@@ -51,7 +51,7 @@ Adafruit_9DOF::Adafruit_9DOF(void)
  
 /**************************************************************************/
 /*!
-    @brief  Setups the HW
+    @brief  Sets up the HW
 */
 /**************************************************************************/
 bool Adafruit_9DOF::begin()
@@ -65,7 +65,7 @@ bool Adafruit_9DOF::begin()
 /**************************************************************************/
 /*!
     @brief  Populates the .pitch/.roll fields in the sensors_vec_t struct
-            with the right angular data (in degree)
+            with the right angular data (in degrees)
 
     @param  event         The sensors_event_t variable containing the
                           data from the accelerometer
