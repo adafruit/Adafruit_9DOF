@@ -4,10 +4,12 @@
   Designed specifically to work with the Adafruit 9DOF Breakout:
   http://www.adafruit.com/products/1714
 
-  These displays use I2C to communicate, 2 pins are required to interface.
+  This class does not communicate directly with the hardware, but
+  converts raw readings (X-Y-Z magnitudes) into more useful values in
+  degrees (roll, pitch, heading).
 
   Adafruit invests time and resources providing this open source code,
-  please support Adafruit andopen-source hardware by purchasing products
+  please support Adafruit and open-source hardware by purchasing products
   from Adafruit!
 
   Written by Kevin Townsend for Adafruit Industries.  
@@ -38,7 +40,7 @@
  
 /**************************************************************************/
 /*!
-    @brief  Instantiates a new Adafruit_9DOF class
+    @brief  Instantiates a new instance of the Adafruit_9DOF class
 */
 /**************************************************************************/
 Adafruit_9DOF::Adafruit_9DOF(void) 
@@ -51,7 +53,7 @@ Adafruit_9DOF::Adafruit_9DOF(void)
  
 /**************************************************************************/
 /*!
-    @brief  Setups the HW
+    @brief  Sets up the HW
 */
 /**************************************************************************/
 bool Adafruit_9DOF::begin()
@@ -65,15 +67,21 @@ bool Adafruit_9DOF::begin()
 /**************************************************************************/
 /*!
     @brief  Populates the .pitch/.roll fields in the sensors_vec_t struct
-            with the right angular data (in degree)
+            with the right angular data (in degrees)
 
     @param  event         The sensors_event_t variable containing the
                           data from the accelerometer
-    @param  orientation   The sensors_vec_t object that will have it's
+    @param  orientation   The sensors_vec_t object that will have its
                           .pitch and .roll fields populated
     @return Returns true if the operation was successful, false if there
             was an error
-            
+
+
+    Converts a set of accelerometer readings into pitch and roll
+    angles. The returned values indicate the orientation of the
+    accelerometer with respect to the "down" vector which it is
+    sensing.
+
     @code
 
     bool error;
@@ -126,7 +134,7 @@ bool Adafruit_9DOF::accelGetOrientation(sensors_event_t *event, sensors_vec_t *o
 /*!
     @brief  Utilize the sensor data from an accelerometer to compensate
             the magnetic sensor measurements when the sensor is tilted
-            (the pitch and roll angles are not equal 0�)
+            (the pitch and roll angles are not equal to 0°)
 
     @param  axis          The given axis (SENSOR_AXIS_X/Y/Z) that is
                           parallel to the gravity of the Earth
@@ -217,7 +225,7 @@ bool Adafruit_9DOF::magTiltCompensation(sensors_axis_t axis, sensors_event_t *ma
 /**************************************************************************/
 /*!
     @brief  Populates the .heading fields in the sensors_vec_t
-            struct with the right angular data (0-359�)
+            struct with the right angular data (0-359°)
 
             Heading increases when measuring clockwise
 
@@ -269,7 +277,7 @@ bool Adafruit_9DOF::magGetOrientation(sensors_axis_t axis, sensors_event_t *even
       return false;
   }
 
-  /* Normalize to 0-359� */
+  /* Normalize to 0-359 degrees */
   if (orientation->heading < 0)
   {
     orientation->heading = 360 + orientation->heading;
