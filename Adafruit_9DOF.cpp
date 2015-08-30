@@ -4,7 +4,9 @@
   Designed specifically to work with the Adafruit 9DOF Breakout:
   http://www.adafruit.com/products/1714
 
-  These displays use I2C to communicate, 2 pins are required to interface.
+  This class does not communicate directly with the hardware, but
+  converts raw readings (X-Y-Z magnitudes) into more useful values in
+  degrees (roll, pitch, heading).
 
   Adafruit invests time and resources providing this open source code,
   please support Adafruit and open-source hardware by purchasing products
@@ -69,11 +71,17 @@ bool Adafruit_9DOF::begin()
 
     @param  event         The sensors_event_t variable containing the
                           data from the accelerometer
-    @param  orientation   The sensors_vec_t object that will have it's
+    @param  orientation   The sensors_vec_t object that will have its
                           .pitch and .roll fields populated
     @return Returns true if the operation was successful, false if there
             was an error
-            
+
+
+    Converts a set of accelerometer readings into pitch and roll
+    angles. The returned values indicate the orientation of the
+    accelerometer with respect to the "down" vector which it is
+    sensing.
+
     @code
 
     bool error;
