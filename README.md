@@ -1,4 +1,4 @@
-#Adafruit 9DOF Library #
+# Adafruit 9DOF Library
 
 This driver is for the Adafruit 9DOF Breakout (http://www.adafruit.com/products/1714), and makes use of Adafruit's Unified Sensor Library (https://github.com/adafruit/Adafruit_Sensor) to provide standard SI units of measure and easy to reuse sensor data.
 
@@ -19,3 +19,8 @@ The Adafruit_9DOF library makes use of Adafruit's existing libraries for the L3G
 Adafruit invests time and resources providing this open source code.  Please support Adafruit and open-source hardware by purchasing products from Adafruit!
 
 Written by Kevin (KTOWN) Townsend for Adafruit Industries.
+
+BSD license, check license.txt for more information All text above must be included in any redistribution
+
+## Installation
+To install, use the Arduino Library Manager and search for 'Adafruit 9DOF' and install the library
