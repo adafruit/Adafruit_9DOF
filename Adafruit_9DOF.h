@@ -34,7 +34,7 @@ typedef enum {
   SENSOR_AXIS_Z = (3)
 } sensors_axis_t;
 
-/* Driver for the the 9DOF breakout sensors */
+/** Driver for the the 9DOF breakout sensors */
 class Adafruit_9DOF {
 public:
   Adafruit_9DOF(void);
