@@ -51,6 +51,7 @@ Adafruit_9DOF::Adafruit_9DOF(void) {}
 /**************************************************************************/
 /*!
     @brief  Sets up the HW
+    @returns true
 */
 /**************************************************************************/
 bool Adafruit_9DOF::begin() {
@@ -146,7 +147,7 @@ bool Adafruit_9DOF::accelGetOrientation(sensors_event_t *event,
 
     @param  accel_event   The accelerometer event data to use to determine
                           the tilt when compensating the mag_event values
-
+    @returns false if unable to read event data from the sensor
     @code
 
     // Perform tilt compensation with matching accelerometer data
@@ -246,6 +247,7 @@ bool Adafruit_9DOF::magTiltCompensation(sensors_axis_t axis,
 
     @param  orientation   The sensors_vec_t object where we will
                           assign an 'orientation.heading' value
+    @returns false if unable to read event data from the sensor
 
     @code
 
@@ -325,6 +327,7 @@ bool Adafruit_9DOF::magGetOrientation(sensors_axis_t axis,
 
     @param  orientation   The sensors_vec_t object that will have it's
                           .roll, .pitch and .heading fields populated
+    @returns false if unable to read event data from the sensor
 */
 /**************************************************************************/
 bool Adafruit_9DOF::fusionGetOrientation(sensors_event_t *accel_event,
