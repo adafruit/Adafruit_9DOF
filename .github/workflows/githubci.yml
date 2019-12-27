@@ -28,5 +28,5 @@ jobs:
     - name: doxygen
       env:
         GH_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PRETTYNAME : ${{ secrets.PRETTYNAME }}
+        PRETTYNAME : "Adafruit 9 DoF Sensor Library"
       run: bash ci/doxy_gen_and_deploy.sh
