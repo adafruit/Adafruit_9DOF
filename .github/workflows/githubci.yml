@@ -1,4 +1,4 @@
-name: Github Arduino Library CI
+name: Arduino Library CI
 
 on: [pull_request, push]
 

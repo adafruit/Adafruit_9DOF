@@ -1,5 +1,5 @@
 /****************************************************************************
-  This is a library for the Adafruit 9DOF Breakout!
+  This is a library for the Adafruit 9DOF Breakout
 
   Designed specifically to work with the Adafruit 9DOF Breakout:
   http://www.adafruit.com/products/1714
@@ -51,7 +51,7 @@ Adafruit_9DOF::Adafruit_9DOF(void) {}
 
 /**************************************************************************/
 /*!
-    @brief  Sets up the hardware
+    @brief  Sets up the hardware - begins I2C
     @returns true
 */
 /*************************************************************************/

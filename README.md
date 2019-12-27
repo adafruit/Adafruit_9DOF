@@ -1,4 +1,4 @@
-# Adafruit 9DOF Library ![Build Status](https://github.com/adafruit/Adafruit_9DoF/workflows/Github%20Arduino%20Library%20CI/badge.svg)
+# Adafruit 9DOF Library ![Build Status](https://github.com/adafruit/Adafruit_9DoF/workflows/Arduino%20Library%20CI/badge.svg)
 
 This driver is for the Adafruit 9DOF Breakout (http://www.adafruit.com/products/1714), and makes use of Adafruit's Unified Sensor Library (https://github.com/adafruit/Adafruit_Sensor) to provide standard SI units of measure and easy to reuse sensor data.
 
