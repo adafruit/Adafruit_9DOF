@@ -4,7 +4,7 @@
 #include <Adafruit_L3GD20_U.h>
 #include <Adafruit_9DOF.h>
 
-/* Assign a unique ID to the sensors */
+  /* Assign a unique ID to the sensors */
 Adafruit_LSM303_Accel_Unified accel = Adafruit_LSM303_Accel_Unified(30301);
 Adafruit_LSM303_Mag_Unified   mag   = Adafruit_LSM303_Mag_Unified(30302);
 Adafruit_L3GD20_Unified       gyro  = Adafruit_L3GD20_Unified(20);

@@ -44,16 +44,16 @@
 /**************************************************************************/
 Adafruit_9DOF::Adafruit_9DOF(void) {}
 
-/***************************************************************************
+/**************************************************************************
  PUBLIC FUNCTIONS
  ***************************************************************************/
 
 /**************************************************************************/
 /*!
-    @brief  Sets up the HW
+    @brief  Sets up the hardware
     @returns true
 */
-/**************************************************************************/
+/*************************************************************************/
 bool Adafruit_9DOF::begin() {
   // Enable I2C
   Wire.begin();
@@ -73,11 +73,11 @@ bool Adafruit_9DOF::begin() {
     @return Returns true if the operation was successful, false if there
             was an error
 
-
     Converts a set of accelerometer readings into pitch and roll
     angles. The returned values indicate the orientation of the
     accelerometer with respect to the "down" vector which it is
     sensing.
+
 
     @code
 
