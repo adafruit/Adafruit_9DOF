@@ -1,4 +1,4 @@
-/***************************************************************************
+/****************************************************************************
   This is a library for the Adafruit 9DOF Breakout
 
   Designed specifically to work with the Adafruit 9DOF Breakout:
