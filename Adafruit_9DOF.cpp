@@ -15,12 +15,17 @@
   Written by Kevin Townsend for Adafruit Industries.
   BSD license, all text above must be included in any redistribution
  ***************************************************************************/
-
+/// @cond SAMD51
 #if ARDUINO >= 100
+/// @endcond
 #include "Arduino.h"
+/// @cond SAMD51
 #else
+/// @endcond
 #include "WProgram.h"
+/// @cond SAMD51
 #endif
+/// @endcond
 
 #include <Wire.h>
 #include <limits.h>
