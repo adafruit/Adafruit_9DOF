@@ -1,26 +1,30 @@
-/***************************************************************************
-  This is a library for the Adafruit 9DOF Breakout
+/*!
+ * @file Adafruit_9DOF.h
+ * This is a library for the Adafruit 9DOF Breakout
+ *
+ * Designed specifically to work with the Adafruit 9DOF Breakout:
+ * http://www.adafruit.com/products/1714
 
-  Designed specifically to work with the Adafruit 9DOF Breakout:
-  http://www.adafruit.com/products/1714
-
-  These displays use I2C to communicate, 2 pins are required to interface.
-
-  Adafruit invests time and resources providing this open source code,
-  please support Adafruit andopen-source hardware by purchasing products
-  from Adafruit!
-
-  Written by Kevin Townsend for Adafruit Industries.
-  BSD license, all text above must be included in any redistribution
- ***************************************************************************/
+ * These displays use I2C to communicate, 2 pins are required to interface.
+ *
+ * Adafruit invests time and resources providing this open source code,
+ * please support Adafruit andopen-source hardware by purchasing products
+ * from Adafruit!
+ *
+ * Written by Kevin Townsend for Adafruit Industries.
+ * BSD license, all text above must be included in any redistribution
+ */
 #ifndef __ADAFRUIT_9DOF_H__
 #define __ADAFRUIT_9DOF_H__
-
+/// @cond SAMD51
 #if (ARDUINO >= 100)
+/// @endcond
 #include "Arduino.h"
 #else
 #include "WProgram.h"
+/// @cond SAMD51
 #endif
+/// @endcond
 
 #include <Adafruit_L3GD20_U.h>
 #include <Adafruit_LSM303_U.h>
@@ -52,4 +56,6 @@ public:
 private:
 };
 
+/// @cond SAMD51
 #endif
+/// @endcond

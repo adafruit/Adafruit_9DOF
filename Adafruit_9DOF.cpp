@@ -1,26 +1,44 @@
-/****************************************************************************
-  This is a library for the Adafruit 9DOF Breakout
+/*!
+ * @file Adafruit_9DOF.cpp
+ *
+ * @mainpage Adafruit 9DOF Breakout
+ *
+ * @section intro_sec Introduction
+ *
+ * This is a library for the Adafruit 9DOF Breakout
+ *
+ * Designed specifically to work with the Adafruit 9DOF Breakout:
+ * http://www.adafruit.com/products/1714
+ *
+ * This class does not communicate directly with the hardware, but
+ * converts raw readings (X-Y-Z magnitudes) into more useful values in
+ * degrees (roll, pitch, heading).
+ *
+ * Adafruit invests time and resources providing this open source code,
+ * please support Adafruit and open-source hardware by purchasing products
+ * from Adafruit!
+ *
+ * @section author Author
+ *
+ * Written by Kevin Townsend for Adafruit Industries
+ *
+ * @section license License
+ *
+ * BSD license, all text above must be included in any redistribution
+ *
+ */
 
-  Designed specifically to work with the Adafruit 9DOF Breakout:
-  http://www.adafruit.com/products/1714
-
-  This class does not communicate directly with the hardware, but
-  converts raw readings (X-Y-Z magnitudes) into more useful values in
-  degrees (roll, pitch, heading).
-
-  Adafruit invests time and resources providing this open source code,
-  please support Adafruit and open-source hardware by purchasing products
-  from Adafruit!
-
-  Written by Kevin Townsend for Adafruit Industries.
-  BSD license, all text above must be included in any redistribution
- ***************************************************************************/
-
+/// @cond SAMD51
 #if ARDUINO >= 100
+/// @endcond
 #include "Arduino.h"
+/// @cond SAMD51
 #else
+/// @endcond
 #include "WProgram.h"
+/// @cond SAMD51
 #endif
+/// @endcond
 
 #include <Wire.h>
 #include <limits.h>
@@ -28,6 +46,9 @@
 
 #include "Adafruit_9DOF.h"
 
+/*!
+  @brief The ratio of a circle's circumference to its diameter
+*/
 #define PI (3.14159265F);
 
 /***************************************************************************
