@@ -80,10 +80,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2cf520ef3c34a42a49fbede7a3fe2e4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit__9_d_o_f.html#a2cf520ef3c34a42a49fbede7a3fe2e4f">accelGetOrientation</a> (sensors_event_t *event, sensors_vec_t *orientation)</td></tr>
 <tr class="memdesc:a2cf520ef3c34a42a49fbede7a3fe2e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the .pitch/.roll fields in the sensors_vec_t struct with the right angular data (in degrees)  <a href="#a2cf520ef3c34a42a49fbede7a3fe2e4f">More...</a><br /></td></tr>
 <tr class="separator:a2cf520ef3c34a42a49fbede7a3fe2e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a893e8f5813b469615e9408fce455b31c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit__9_d_o_f.html#a893e8f5813b469615e9408fce455b31c">magTiltCompensation</a> (sensors_axis_t axis, sensors_event_t *mag_event, sensors_event_t *accel_event)</td></tr>
+<tr class="memitem:a893e8f5813b469615e9408fce455b31c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit__9_d_o_f.html#a893e8f5813b469615e9408fce455b31c">magTiltCompensation</a> (<a class="el" href="_adafruit__9_d_o_f_8h.html#a650aaa2dd765cee1d4b16e44a4995d7e">sensors_axis_t</a> axis, sensors_event_t *mag_event, sensors_event_t *accel_event)</td></tr>
 <tr class="memdesc:a893e8f5813b469615e9408fce455b31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilize the sensor data from an accelerometer to compensate the magnetic sensor measurements when the sensor is tilted (the pitch and roll angles are not equal to 0°)  <a href="#a893e8f5813b469615e9408fce455b31c">More...</a><br /></td></tr>
 <tr class="separator:a893e8f5813b469615e9408fce455b31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3832504bccd35f1436a68e7f1c28027"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit__9_d_o_f.html#ae3832504bccd35f1436a68e7f1c28027">magGetOrientation</a> (sensors_axis_t axis, sensors_event_t *event, sensors_vec_t *mag_orientation)</td></tr>
+<tr class="memitem:ae3832504bccd35f1436a68e7f1c28027"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit__9_d_o_f.html#ae3832504bccd35f1436a68e7f1c28027">magGetOrientation</a> (<a class="el" href="_adafruit__9_d_o_f_8h.html#a650aaa2dd765cee1d4b16e44a4995d7e">sensors_axis_t</a> axis, sensors_event_t *event, sensors_vec_t *mag_orientation)</td></tr>
 <tr class="memdesc:ae3832504bccd35f1436a68e7f1c28027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the .heading fields in the sensors_vec_t struct with the right angular data (0-359°)  <a href="#ae3832504bccd35f1436a68e7f1c28027">More...</a><br /></td></tr>
 <tr class="separator:ae3832504bccd35f1436a68e7f1c28027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2518f1c6a8fba965166b301360b92023"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit__9_d_o_f.html#a2518f1c6a8fba965166b301360b92023">fusionGetOrientation</a> (sensors_event_t *accel_event, sensors_event_t *mag_event, sensors_vec_t *orientation)</td></tr>
@@ -162,7 +162,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Adafruit_9DOF::magTiltCompensation </td>
           <td>(</td>
-          <td class="paramtype">sensors_axis_t&#160;</td>
+          <td class="paramtype"><a class="el" href="_adafruit__9_d_o_f_8h.html#a650aaa2dd765cee1d4b16e44a4995d7e">sensors_axis_t</a>&#160;</td>
           <td class="paramname"><em>axis</em>, </td>
         </tr>
         <tr>
@@ -207,7 +207,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Adafruit_9DOF::magGetOrientation </td>
           <td>(</td>
-          <td class="paramtype">sensors_axis_t&#160;</td>
+          <td class="paramtype"><a class="el" href="_adafruit__9_d_o_f_8h.html#a650aaa2dd765cee1d4b16e44a4995d7e">sensors_axis_t</a>&#160;</td>
           <td class="paramname"><em>axis</em>, </td>
         </tr>
         <tr>
@@ -293,7 +293,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_adafruit__9_d_o_f_8h_source.html">Adafruit_9DOF.h</a></li>
-<li>Adafruit_9DOF.cpp</li>
+<li><a class="el" href="_adafruit__9_d_o_f_8cpp.html">Adafruit_9DOF.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
