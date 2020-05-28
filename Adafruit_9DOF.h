@@ -16,15 +16,11 @@
  */
 #ifndef __ADAFRUIT_9DOF_H__
 #define __ADAFRUIT_9DOF_H__
-/// @cond SAMD51
 #if (ARDUINO >= 100)
-/// @endcond
 #include "Arduino.h"
 #else
 #include "WProgram.h"
-/// @cond SAMD51
 #endif
-/// @endcond
 
 #include <Adafruit_L3GD20_U.h>
 #include <Adafruit_LSM303_U.h>
@@ -56,6 +52,4 @@ public:
 private:
 };
 
-/// @cond SAMD51
 #endif
-/// @endcond
